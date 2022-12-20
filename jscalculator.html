@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size:20pt;">CALCULATOR</h1>
+    <input type="text" name="" id="first_No" placeholder="Enter your first number here.." style="height: 8vh;">
+    <input type="text" name="" id="second_No" placeholder="Enter your second number here.." style="height:8vh ;">
+    <br><br>
+    <button style="background-color: blue; color:white; padding:20px" onclick="add()">ADD</button>
+    <button style="background-color: green; color:white; padding: 20px;" onclick="substract()">SUBSTRACT</button>
+    <button style="background-color: red; color:white;padding:20px" onclick="divide()">DIVIDE</button>
+    <button style="background-color: red;color:white;padding: 20px;" onclick="multiply()">MULTIPLY</button>
+    <p id="result" style=" text-align:center; background-color: black;color:white;font-size:50pt;"></p>
+
+    <script>
+        function add(){
+            var first_num= first_No.value;
+            var second_num=second_No.value;
+            var Total=Number(first_num) + Number(second_num);
+            result.innerText=Total;
+
+        }
+
+        function substract(){
+            var first_num= first_No.value;
+            var second_num=second_No.value;
+            var Total=Number(first_num) - Number(second_num);
+            result.innerText=Total;
+        }
+
+        function divide(){
+            var first_num= first_No.value;
+            var second_num=second_No.value;
+            var Total=Number(first_num) / Number(second_num);
+            result.innerText=Total;
+        }
+
+        function multiply(){
+            var first_num= first_No.value;
+            var second_num=second_No.value;
+            var Total=Number(first_num) * Number(second_num);
+            result.innerText=Total;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>GRADING SYSTEM</h1>
+    <div>
+        <h2>WELCOME!</h2>
+        <input type="text" placeholder="Enter your score" id="checkscore">
+        <button onclick="grade()">CHECK RESULT</button>
+        <p id="result"></p>
+    </div>
+
+    <style>
+        h1 {
+            height: 10vh;
+            font-size: 30px;
+            font-weight: 600;
+            border: 2px dashed white;
+            color: white;
+            text-align: center;
+            background-color: blue;
+        }
+
+        div {
+            height: 50vh;
+            width: 50vw;
+            border: 3px dashed blue;
+            background-color: white;
+            margin: 140px auto;
+        }
+
+        h2 {
+            color: blue;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        input {
+            height: 8vh;
+            width: 20vw;
+            border: 1px solid blue;
+            margin-top: 80px;
+            margin-left: 90px;
+
+        }
+
+        ::placeholder {
+            color: blue;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        button {
+            width: 15vw;
+            height: 8vh;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: 2px dashed white;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script>
+        function grade() {
+            var my_score = checkscore.value;
+            if (my_score == "") {
+                result.innerText = "PLEASE, ENTER YOUR SCORE!";
+                result.style.color = "red";
+            } else if (my_score <= 39) {
+                result.innerText = "SORRY, YOU FAILED!";
+                result.style.color = "red";
+            } else if (my_score == 40) {
+                result.innerText = "YOU PASSED!";
+                result.style.color = "yellow";
+            } else if (my_score >= 75) {
+                result.innerText = "YOU GOT A DISTICTION, WELLDONE!";
+                result.style.color = "darkgreen";
+            } else if (my_score <= 74) {
+                result.innerText = "VERY GOOD";
+                result.style.color = "darkyellow"
+            } else {
+                result.innerText = "THIS IS NOT A NUMBER"
+                result.style.color = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>
